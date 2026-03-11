@@ -1,0 +1,14 @@
+
+JavaScript dan ECMAScript
+ES 6, ES 5
+
+https://github.com/abahe/js-pzn.git
+
+ONEDAY25
+
+Escape Sequence 
+
+\n
+\t (tab)
+
+\"

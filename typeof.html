@@ -1,0 +1,24 @@
+<html>
+<body> 
+    <h1>Alert, Prompt, Confirm</h1>
+    <script>
+        //alert("Selamat Datang di Website Saya!");
+        let data = 70;
+        if (typeof data === "undefined"){
+            console.info("Data is undefined");
+        }else if (typeof data === "number"){
+            console.info("Data is number"); 
+        }else if (typeof data === "string"){
+            console.info("Data is string"); 
+        }
+
+        //in Operator
+        const person = {
+            name: "Jajang",
+            age: 30 
+        }
+
+        const result = "name" in person;
+        document.writeln(`<p>${result}</p>`);
+    </script>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<body> 
+    <h1>Falsy, Truthy</h1>
+    <script>
+        // falsy
+        // false
+        // 0
+        // -0
+        // 0n
+        // ""
+        // null
+        // undefined
+        // NaN
+
+        let data = 0;
+
+        if (data) {
+            document.writeln("Data is truthy");
+        } else {
+            document.writeln("Data is falsy");
+        }
+
+        // truthy
+        // true
+        // non-zero number (positive or negative)
+        // non-empty string
+        // object => array, object literal, function, [], {}]
+        let data2 = "Hello";
+        if (data2) {
+            document.writeln("Data2 is truthy");
+        } else {
+            document.writeln("Data2 is falsy");
+        }
+
+        console.info("Hello" || "");
+        console.info("" || "Hello");
+        console.info(0 || "Hello");
+        console.info(false || "Hello");
+        console.info(null || "Hello");
+        console.info(0 || false); //22 nya false, diambil yg terakhir - false 
+
+        const person = {
+            firstName: "Edi", 
+            lastName: "Brokoli"
+        };
+
+        const name = person.firstName || person.lastName || "Nama Tidak Diketahui";
+        //print <br> <hr>
+        document.writeln("<br><hr>");
+        document.writeln(`Name : ${name}`);
+
+        // Operator OR (||) di Non Boolean
+        // membaca dari kiri ke kanan, mengambil nilai pertama yg truthy
+        // jika tidak ada satupun yg berisi truthy, maka yang terakhir yg diambil,
+
+        // Operator AND (&&) di Non Boolean
+        // memabca dari kiri ke kanan, mengambil nilai pertama yg falsy 
+        // jika tidak ada satupun yg berisi falsy, maka yang terkahir yg diambil 
+
+        console.info("HELLO" && '');
+        console.info("" && []); 
+        console.info("0" && "NOL");
+
+
+
+
+    </script>
+</html>

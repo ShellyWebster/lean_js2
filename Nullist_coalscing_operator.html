@@ -1,0 +1,49 @@
+<html>
+<body> 
+    <h1>Nullist_coalscing, opsional chaining</h1>
+    <body>
+        <!-- null dan undefined! -->
+        <br>
+        <!-- Nullist_coalscing Operator (??) adalah operator logika yang mengembalikan operand sebelah kanan ketika operand sebelah kiri bernilai null atau undefined, dan mengembalikan operand sebelah kiri jika tidak. Operator ini sangat berguna untuk memberikan nilai default pada variabel yang mungkin tidak memiliki nilai. -->
+        
+    </body>
+    <script>
+        // let parameter = "ojo";
+        let parameter;
+        // jika parameter bernilai null atau undefined, maka akan mengembalikan "Nilai Default"
+        
+        // using iff
+        // let data = parameter; 
+
+        // if  (data === undefined || data === null) {
+        //     data = "Nilai Default";
+        // }
+
+        //nullist coalescing operator
+        let data = parameter ?? "Nilai Default";
+
+        // alert(data);
+        document.writeln(`<p>${data}</p>`);
+
+        // mengakses property nullish
+        // let person = {}
+        let person = {
+            address: {
+                country: "Indonesia"
+            }
+        }
+
+        let country = person?.address?.country;
+
+        // manual checking 
+        
+        // let country;
+        // if(person.address !== undefined && person.address !== null) {
+        //     country = person.address.country;
+        // }
+
+        document.writeln(`${country}`);
+
+        document.writeln(`sukses`);
+    </script>
+</html>

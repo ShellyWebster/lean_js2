@@ -1,0 +1,65 @@
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body> 
+    <h1>Array, Tipe Data Objek</h1>
+    <script>
+        const name = "Jajang";
+        const age = 30;
+        const nilaiSaya = 80;
+
+        let arrayNama = ["Jajang", "Nurjaman"];
+        arrayNama.push("Siti");
+        arrayNama.push("Lofie");
+
+        console.table(arrayNama);
+
+        delete arrayNama[2];
+
+        console.table(arrayNama);
+
+        let arraySekolah = ["SMA 1", "SMA 2"];
+
+        arraySekolah.push(arrayNama);
+
+        console.table(arraySekolah);
+
+        console.log("objek here!");
+
+        // tipe data object
+        const person = {};
+        person["nama"] = "Jajang Nurjaman";
+        person["usia"] = 45;
+        person["alamat"] = "Jalan Merdeka No. 123";
+
+        console.table(person);
+
+        // menghapus 
+        delete person["usia"];
+
+        console.table(person);
+
+        // langsung inisiasi 
+        const orang = {
+            nama: "Eko Saja",
+            alamat: "INdonesia",
+            umur: 30
+        }
+
+        console.table(orang);
+
+        const nilai = 70;
+        if(nilai < 70){
+            document.writeln("Nilai Anda : " + nilai + ", Anda Tidak Lulus <br>");
+        }else{
+            document.writeln("Nilai Anda : " + nilai + ", Anda Lulus <br>");
+        }
+
+    </script>
+
+</body>
+</html>
+

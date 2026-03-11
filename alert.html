@@ -1,0 +1,33 @@
+<html>
+<body> 
+    <h1>Alert, Prompt, Confirm, Undifined</h1>
+    <script>
+
+        let namex = 70;
+        if (namex === undefined){
+            alert("UNDEFINED");
+        }else{
+            alert("DEFINED");
+        }
+
+        let firstName = null;
+        if(firstName === null){
+            alert("NULL");
+        }else{
+            alert("NOT NULL");  
+        }
+
+
+        const masuk = confirm("Apakah Anda yakin ingin masuk?");
+
+        if(masuk) {
+            const name = prompt("Nama Anda siapa?");
+
+            alert(`Hello, ${name}!`); // Menampilkan pesan alert
+
+        }else{
+            alert("bye bye");
+        }
+    
+    </script>
+</html>

@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+    <TITLE>Hello, World!</TITLE>
+</HEAD>
+<BODY>
+    <H1>Hello, World!</H1>
+    <P>Welcome to my first HTML page.</P>
+
+<script>
+    // This script displays an alert when the page loads
+    document.writeln("Hellow jS!" + "<br>");
+
+
+    var fullName = "Herctor Barbossa";
+    var firstName = "Herctor";
+    var lastName = "Barbossa";
+
+    document.writeln("Name : " + fullName + "<br>");
+    document.writeln("<br><hr>");
+
+    document.writeln("<br>");
+    document.writeln("Tipe data number:<br>");
+    document.writeln(1250);
+    document.writeln("<br><hr>");
+    // window.onload = function() {
+    //     alert("Hello, World!");
+    // };
+    //number notation :
+    /*
+    Hexadecimal : 0xFF 
+    Binary : 0b10101 
+    Octal : 0o10 
+    */
+   document.writeln("Hexadecimal 0xFF = " + 0xFF + "<br>");
+   document.writeln("Binary 0b10101 = " + 0b10101 + "<br>");
+   document.writeln("Octal 0o10 = " + 0o10 + "<br>");
+   document.writeln("<br><hr> ");
+   //type data boolean 
+   document.writeln("jack true = " + true + "<br>");
+   document.writeln("false = " + false + "<br><br>");
+
+   document.writeln("<Textarea rows='10' cols='100'>");
+   document.writeln("Escape sequence tab2x : \t\tOKEYA");
+   document.writeln("Escape squence petik dua : \"HELLOW\"");
+   document.writeln("</Textarea>");
+   
+   document.writeln("<br><hr>");
+
+   //print full name with concatenation
+   document.writeln("Full Name : " + firstName + " " + lastName + "<br>");
+   
+    let age = 30;
+    document.writeln("Age (with let): " + age + "<br>");
+    document.writeln("<br><hr>");
+
+    const PI = 3.14;
+    document.writeln("Value of PI (with const): " + PI + "<br>");
+
+    
+    document.writeln("Operator Aritmatika : <br>");
+    document.writeln("10 + 5 = " + (10 + 5) + "<br>");
+
+    // modulo
+    document.writeln("Module 5 % 2 : " + (5 % 2));
+
+    document.writeln("<br><br>");
+    // operator augmented assigment
+    let result = 3;
+    document.writeln("Result 3+3=6 : " + (result+=3));
+    document.writeln("<br>");
+
+    document.writeln("Operator Unary");
+
+    document.writeln("<br>");
+
+    let result_compare = 5 == "5";
+    document.writeln("<br><br><b>Perbandingan</b><br>");
+    document.writeln("<p>" + result_compare + "</p");
+    result_compare = 5 === "5";
+    document.writeln("<p>" + result_compare + "</p");
+
+    document.writeln("<br><br><b>Operator Logika</b><br>");
+    document.writeln("&&, ||, ! <br>");
+
+    const nilaiUjuan = 76;
+    const nilaiAbsensi = 60;
+
+    const lulusUjian = nilaiUjuan > 75;
+    const lulusAbsensi = nilaiAbsensi > 75;
+
+    // const lulus = lulusUjian && lulusAbsensi;
+    const lulus = lulusUjian || lulusAbsensi;
+
+    document.writeln("lulus : " + lulus);
+
+    document.writeln("<br><br>");
+    
+    // console 
+    console.debug("ini debug");
+
+    console.info("ini info");
+
+    console.warn("ini peringatan");
+
+    console.error("ini contoh console error");
+    
+    document.writeln("<br><br><hr><br>");
+    document.writeln("String Temlate <br>");
+
+    const name = "Atang Seina";
+    const age2 = 36;
+    const nilaiSaya = 80;
+    const iniMultiline = ` ini contoh
+muliline string
+
+    apakah ada baris 
+yang kosong? `;
+
+    // expression : 1 > 3
+    
+    const template = `Name : ${name}, age : ${age}, lulus : ${nilaiSaya > 75}`;
+
+    console.info(template);
+    console.info(iniMultiline);
+
+    document.writeln("<br><br><hr><br>");
+
+    document.writeln("Konversi String dan Number <br>");
+    const value = "1";
+    const value2 = 1;
+    const sum = value + value2; // hasilnya akan menjadi "11" karena value adalah string
+
+    document.writeln("Hasil penjumlahan '1' + 1 = " + sum + "<br>");
+
+    /*
+    parsetInt(x), parseFloat(x), Number(x) untuk mengkonversi string ke number
+    number.toString() untuk mengkonversi number ke string
+    */
+
+    const sum2 = parseInt(value) + value2; // hasilnya akan menjadi 2 karena value dikonversi ke number
+    document.writeln("Hasil penjumlahan parseInt('1') + 1 = " + sum2 + "<br>");
+
+    document.writeln(`<p>parseInt : ${parseInt("1.6")}</p>`);
+
+    document.writeln(`<p>parseFloat : ${parseFloat("1.3salah")}</p>`);
+
+    //parse number 
+    const numberValue = "123ajo";
+    document.writeln(`<p>parse Number : ${Number(numberValue)}</p>`);
+
+    document.writeln("<br><br><hr><br>");
+
+    //isNan
+    const notANumber = "abc";
+    document.writeln(`<p>isNaN('abc') : ${isNaN(notANumber)}</p>`);
+
+    document.writeln(`<p>OIS isNaN('123') : ${isNaN("123")}</p>`);
+    
+    document.writeln("<br><br><hr><br>");
+
+    document.writeln("Array Thingy<br>");
+    let arrayKosong = [];
+
+    let arrayNama = ["Jajang", "Nurjaman"];
+
+    console.info(`array Kosong : ${arrayKosong}`);
+
+    console.info(`arrayNama : ${arrayNama}`);
+
+    console.info(`arrayNama : ${arrayNama[0]}`);
+
+    document.writeln("<br><br><hr><br>");
+</script>
+
+
+<script src="scripts/hello-world.js"></script>
+</BODY>
+</HTML>

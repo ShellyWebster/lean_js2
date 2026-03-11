@@ -1,0 +1,41 @@
+<html>
+<body> 
+    <h1>Switch</h1>
+    <script>
+
+        // const day = 3;
+        let day = prompt("Masukkan nomor hari (1-7):");
+        // convert string to number
+        day = parseInt(day);
+        let dayName;
+
+        switch(day){
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default:
+                dayName = "Invalid Day";
+        }
+
+        document.writeln("Day : " + day + "<br>");
+        document.writeln("Day Name : " + dayName + "<br>");
+    </script>
+</html>
