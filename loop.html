@@ -18,5 +18,29 @@
             document.writeln(`<p>Pengulangan ke ${counter}</p>`);
             counter++;
         }
+
+        let counter2 = 1;
+        do {
+            document.writeln(`<p>Do while ke ${counter2}</p>`);
+            counter2++;
+        } while(counter2 <= 10);
+
+        let coutner3 = 1; 
+        while(true) {
+            document.writeln(`<p>Pengulangan ke ${coutner3}</p>`);
+            coutner3++;
+            if(coutner3 > 3) {
+                break;
+            }
+        }
+
+        for(let i = 1; i <= 100; i++) {
+            //cek modulo
+            if (i % 2 === 0) {
+                continue; //dilompatin
+            }
+            document.writeln(`Pengulangan ganjil ${i} <br> `);
+        }
+
     </script>
 </html>
