@@ -1,0 +1,18 @@
+<html>
+    <body>
+        Optional Chaining
+        <script>
+        const person = {
+            address: {
+                // country : "Indonesia",
+                city: "Bandung"
+            }
+        };
+
+        let country = person?.address?.country;
+
+        document.writeln(`<p>${country}</p>`); 
+
+    </script>
+    </body>
+</html>

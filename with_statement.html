@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+        //tanpa with statement
+        const person = {
+            firstname: "Jajang",
+            age: 30,
+            city: "Bandung"
+        };
+
+        console.log(person.firstname);
+        console.log(person.age);
+
+        with(person) {
+            console.log(firstname);
+            console.log(age);
+            console.log(city);
+        }
+    </script>
+    </body>
+</html>
