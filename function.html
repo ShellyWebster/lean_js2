@@ -1,0 +1,77 @@
+<html>
+    <body>
+        <script>
+
+        sayHello("Juned");
+
+        //paramenter atau argument 
+        function sayHello(name, mid_name = "", last_name = "") {
+            document.writeln(`<p>Hello, ${name} ${mid_name} ${last_name}!</p>`);
+        }
+
+        sayHello("Jajang");
+
+        sayHello("Jajan", "Tengan");
+
+        //function return value
+        function sum1(a, b) {
+            return a + b;
+        }
+
+        const result = sum1(10, 20);
+        document.writeln(`<p>Hasil: ${result}</p>`);
+
+        //function return array 
+        function getNames() {
+            return ["Jajang", "Nurjaman", "Suratmaja"];
+        }
+        const names = getNames();
+        document.writeln(`<p>${names}</p>`);
+        document.writeln(`<p>${names.join(", ")}</p>`);
+
+
+        function isContains(array, searchValue) {
+            for (const element of array) {
+                console.info("iterasi element: " + element);
+                if (element === searchValue) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        console.log(isContains([1, 2, 3, 4, 5, 6], 5));
+
+        document.writeln("opsional parameter : <br><hr> ");
+
+        document.writeln("Rest parameter, only 1 in fucntion , harus dipossi terakhir : <br> ");
+
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            console.info(`Total ${name} is ${total}`);
+        }
+
+        sum("Orange", 2, 3 , 4, 4);
+        
+        const values = [10, 10, 10, 10, 10];
+
+        //Spread Syntax
+        sum("Apple", ...values); //spread operator, merubah array menjadi list of value
+        sum("Banana", ...values);
+
+        // function di variable 
+        function sayHello2(name) {
+            document.writeln(`<p>Hello, ${name}!</p>`);
+        }
+
+        let say = sayHello2;
+
+        sayHello2("Eko");
+        say("Budiman!");
+        
+    </script>
+    </body>
+</html>
