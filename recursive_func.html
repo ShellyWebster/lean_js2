@@ -1,0 +1,38 @@
+<html>
+    <body>
+        Recursive Function
+        
+        <script>
+
+            function factorial(value) {
+                let result = 1;
+                for(let i = 1; i <= value; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+
+            let test = 6;
+
+            document.writeln(`factorial ${test} = ${factorial(test)}`);
+
+            // 1 * 2 * 3 * 4 * 5 * 6 = 720
+            document.writeln(`<br>`);
+
+            function factorialRecursive(value) {
+                
+                if(value === 1) {
+                    console.log(`${value} * 1`);
+                    return 1;
+                } else {
+                    console.log(`${value} * ${value - 1}`);
+                    return value * factorialRecursive( value - 1);
+                }
+            }
+            // 5 * 4 * 3 * 2 * 1 
+
+            document.writeln(`recursive ${factorialRecursive(4)}`); 
+
+        </script>
+    </body>
+</html>

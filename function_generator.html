@@ -1,0 +1,18 @@
+<html>
+    <body>
+        function generator
+        <script>
+        function* createNames(){
+            yield "Eko";
+            yield "Sumarno";
+            yield "Mangkubumi";
+        }
+
+        const names = createNames();
+        for (const name of names) {
+            console.log(name);
+        }
+        
+        </script>
+    </body>
+</html>
