@@ -17,18 +17,38 @@
         */
 
         // yang kompleks 
+        // lazy 
         function* buatGanjil(value) {
             for (let i=1; i <= value; i++) {
                 if (i % 2 === 1) {
+                    console.info(`Yield ${i}`);
                     yield i;
                 }
             }
         }
 
-        const angkaGanjil = buatGanjil(100);
+        // eager 
+        function buatGanjilArray(value) {
+            const result = [];
+            for (let i=1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        // const angkaGanjil = buatGanjil(100);
+        const angkaGanjil = buatGanjilArray(100);
         for(const angka of angkaGanjil) {
             console.info(angka);
         }
+
+        const angkaGanjil2 = buatGanjil(20);
+        console.info(`using next ${angkaGanjil2.next().value}`);
+        console.info(`using next ${angkaGanjil2.next().value}`);
+        console.info(`using next ${angkaGanjil2.next().value}`);
         
         </script>
     </body>
