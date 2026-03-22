@@ -1,0 +1,29 @@
+<html>
+    <body>
+        Objek method,
+        <script>
+            // cara 1
+            // const person = {
+            //     name: "Eko",
+            //     sayHello: function(name) {
+            //         alert(`Hellow ${name}`);
+            //     }
+            // }
+
+            // person.sayHello("Budi");
+
+            //cara 2 
+            const person = {
+                name: "Eko",
+            };
+
+            person.sayHello = function (name){
+                alert(`Hello ${name}`);
+            }
+
+            alert(person.name);
+            person.sayHello('Junaedi');
+
+        </script>
+    </body>
+</html>

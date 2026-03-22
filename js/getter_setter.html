@@ -1,0 +1,27 @@
+<html>
+    <body>
+        Getter Setter<br>
+        <script>
+            const person = {
+                firstName: "Jajang",
+                lastName: "Nurjaman",
+                get fullName() {
+                    return `${this.firstName} ${this.lastName}`;
+                },
+                set fullName(val) {
+                    const array = val.split(" ");
+                    this.firstName = array[0];
+                    this.lastName = array[1];
+                }
+            }
+
+            console.info(`fullname : ${person.fullName}`);
+            
+            person.fullName = "Budi Sudarsono Simatupang";
+            console.info(person.firstName); 
+            console.info(person.lastName); 
+
+
+        </script>
+    </body>
+</html>

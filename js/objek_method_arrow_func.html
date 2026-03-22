@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            const person = {
+                name: "Eko",
+                //anonymous
+                // sayHello: function (name){
+                //     console.info(this) //person
+                //     console.info(`Hello ${name}`);
+                // }
+                //arrow func 
+                sayHello: (name) => {
+                    console.info('check : ' + this) //window
+                    console.info(`Holla ${name}`); 
+                }
+            }
+
+            person.sayHello("Juned");
+        </script>
+    </body>
+</html>

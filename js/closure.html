@@ -1,0 +1,42 @@
+<html>
+    <body>
+        CLOSURE<br>
+        kombinasi function dan bundel referensi 
+        <script>
+
+            function createAdder(value) {
+                const owner = "Eko";
+                 
+                function add(param) {
+                    console.info(owner);
+                    return value + param;
+                }
+
+                return add;
+            }
+
+            // let result = createAdder(10, 2);
+            // console.log(`result : ${result}`);
+
+            const addTwo = createAdder(2);
+            // // seakan2
+            // function addTwo(param) {
+            //     console.info("Eko");
+            //     return 2 + param;
+            // }
+
+
+            
+            const addTen = createAdder(10);
+            // // seakan2
+            // function addTen(param) {
+            //     console.info("Eko");
+            //     return 10 + param;
+            // }
+
+            console.info(addTwo(10));
+            console.info(addTwo(20));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        Strict mode 
+        <script>
+            function useStrictMode() {
+                'use strict';
+                const person = {
+                    firstName: "Juned"
+                }
+
+                var car = "yeah";
+
+                with (person) {
+                    console.info(firstName);
+                }
+            }
+
+            useStrictMode();
+        </script>
+    </body>
+</html>
