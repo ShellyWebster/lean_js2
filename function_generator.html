@@ -12,6 +12,23 @@
         for (const name of names) {
             console.log(name);
         }
+        /*
+        generator: bisa iterasi pakai for of tapi tidak bisa diakses dengan index, bisa menghasilkan banyak nilai dengan sekali panggil, bisa menghasilkan nilai yang tidak terbatas, bisa digunakan untuk membuat iterasi yang kompleks
+        */
+
+        // yang kompleks 
+        function* buatGanjil(value) {
+            for (let i=1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    yield i;
+                }
+            }
+        }
+
+        const angkaGanjil = buatGanjil(100);
+        for(const angka of angkaGanjil) {
+            console.info(angka);
+        }
         
         </script>
     </body>
