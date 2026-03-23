@@ -1,0 +1,32 @@
+<html>
+    <body>
+        debugger !
+    <script>
+        // debugger;
+        // function createFullName(firstName, middleName, lastName) {
+        //     // debugger;
+        //     const fullName = `${firstName} ${lastName} ${lastName}`;
+        //     return fullName;
+        // }
+
+        // const name = createFullName("Jajang", "Nurjaman", "Khannedy");
+        // console.info(name);
+
+        function sum(...numbers){
+            debugger;
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+                console.log(`Iterasi: total = ${total}, number = ${number}`);
+                debugger;  // Berhenti di setiap iterasi
+            }
+            return total;
+        }
+
+
+        console.info(sum(1,1,1,1,1));
+
+
+    </script>
+    </body>
+</html>>

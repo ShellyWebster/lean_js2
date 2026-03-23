@@ -1,0 +1,50 @@
+<html>
+    <body>
+        arrow function
+        <script>
+
+            // const sayHello = (name) => {
+            //     const say = `Hellow ${name}`;
+            //     console.info(say);
+            // }
+
+            // 1 block / 1 baris 
+            const sayHello = (name) => console.info(`Hello ${name} one block`);
+
+            sayHello("Ajo Bendri");
+
+            const sum = (first, second) => first + second;
+
+            console.info(sum(7, 3));
+
+            //
+            const sayHelloTanpaParam = name => console.info(`tanpaparam Hello ${name}`);
+            sayHelloTanpaParam("Eko");
+
+            //arrow sebagai parameter 
+            function giveMeName(callback) {
+                callback("Ejon");
+            }
+
+            //anonimous function 
+            // giveMeName(function(name) {
+            //     console.info("HELOOOO");
+            // });
+
+            // arrow funciton
+            giveMeName((name) => console.info(`arrow func as paramenter : ${name}`));
+
+
+            /*
+            fungsi arrow function untuk apa ?
+            - harus di dalam variabel 
+
+            arrow function tanpa kurung parameter -> jika parameter di arrow function hanya satu,
+
+            */
+        </script>
+    </body>
+
+    
+
+</html>
