@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute selector</title>
+    <style>
+        /* a {
+            color: red;
+        } */
+        /* a[target] {
+            color: red;
+        } */
+        a[target="_blank"] {
+            color: red;
+        }
+        /* p[title~="belajar"] {
+            color: blue;
+        } */
+        /* p[title|="belajar"] {
+            color: blue;
+        } */
+        /* dimulai dengan belajar */
+        /* p[title^="belajar"] {
+            color: green;
+        } */
+        /* diakhiri dengan belajar */
+        /* p[title$="belajar"] {
+            color: orange;
+        }  */
+
+        /* mengandung belajar */
+        /* p[title*="belajar"] {
+            color: purple;
+        } */
+
+        [title*="belajar"] {
+            color: rgb(17, 55, 128);
+        }
+
+    </style>
+</head>
+<body>
+    <a href="" target="_blank">Contoh 1</a>
+    <a href="">Contoh 1</a>
+    <a href="" target="_self">Contoh 1</a>
+    <a href="">Contoh 1</a>
+
+    <p title="belajar">Belajar doang</p>
+    <p title="belajar css">Ini adalah paragraf 1</p>
+    <p title="belajarhtml">Ini adalah paragraf 2</p>
+    <p title="belajar-pemrograman">Ini adalah paragraf 3</p>
+    <p title="pemrograman-belajar">Ini adalah paragraf 4</p>
+
+    <span title="pemrograman belajar">Belajar doang</span>
+</body>
+</html>
