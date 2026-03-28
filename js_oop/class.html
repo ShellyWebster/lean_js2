@@ -7,12 +7,26 @@
 </head>
 <body>
     <script>
-        class Person() {
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
 
+            //method 
+            sayHello(name) {
+                console.info(`Hi ${name}, my name is ${this.name}`);
+                // return `Hello ${name}, my name is ${this.name}`;
+            }
         }
 
-        const eko = new Person();
+        const eko = new Person("Eko");
         console.info(eko);
+        eko.sayHello("Budi");
+        
+        const budi = new Person("Budi");
+        console.info(budi);
+        budi.sayHello("Eko");
+
     </script>
 </body>
 </html>
