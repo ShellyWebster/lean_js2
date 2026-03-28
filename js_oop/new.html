@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+</head>
+<body>
+    <h1>New Javascript OOP</h1>
+    <script>
+        // function User(name) {
+        //     this.name = name;
+        //     this.isAdmin = false;
+        // }
+
+        // let user = new User("Jack");
+        // // alert(user.name); // Jack
+        // document.writeln(user.name); // Jack
+        // console.log(eko);
+
+
+        function Person(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            this.sayHello = function(){
+                return "Hello " + this.firstName + " " + this.lastName;
+            }
+        }
+
+        let joko = new Person("Joko", "Susilo");
+        // joko.firstName = "Joko";
+        // joko.lastName = "Widodo";
+        document.writeln(joko.sayHello());
+        console.log(joko);
+        console.log(joko.sayHello());
+
+
+        //prototype ;
+
+        
+
+
+    </script>
+</body>
+</html>

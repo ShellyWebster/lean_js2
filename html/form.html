@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form name="registrasi"  
+    action="form-submit.html" 
+    method="get" 
+    >
+        <label for="nama">Nama : </label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" value="nilai awal"><br><br>
+        
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email"><br><br>
+        
+        <label for="password">Password : </label>
+        <input type="password" id="password" name="password" placeholder="Masukkan password"><br><br>
+
+        <input type="reset" value="Reset">
+
+        <input type="submit" value="Registrasi">
+        <hr>
+        Hobby : <br>
+        <input type="checkbox" id="membaca" name="hobby" value="Membacax">
+        <label for="membaca">Membaca</label><br>
+
+        <input type="checkbox" id="menulis" name="hobby" value="Menulisx">
+        <label for="menulis">Menulis</label><br>
+
+        <input type="checkbox" id="berkebun" name="hobby" value="Berkebunx">
+        <label for="berkebun">Berkebun</label><br>
+
+        <hr>
+        <label for="color_favorite">Warna Favorit : </label>
+        <input type="color" id="color_favorite" name="color_favorite"><br><br>
+
+        <input type="button" value="Hello Cuy" onclick="alert('Hello Cuy')">
+        <hr>
+        <label for="tanggal_lahir">Tanggal Lahir : </label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir"><br><br>
+
+        <label for="join_date">Join Date : </label>
+        <input type="date" id="join_date" name="join_date" value="2026-01-01" min="2025-01-01" max="2026-08-01"><br><br>
+
+        <hr>
+        <label for="jam_masuk">Jam Masuk : </label>
+        <input type="time" id="jam_masuk" name="jam_masuk"><br><br>
+
+        <label for="jam_keluar">Jam Keluar : </label>
+        <input type="datetime-local" id="jam_keluar" name="jam_keluar"><br><br>
+
+        <hr>
+        <!-- input week-->
+        <label for="week">Pilih Minggu : </label>
+        <input type="week" id="week" name="week"><br><br>
+
+        <hr>
+        <label for="nilai_ujian">Nilai Ujian : </label>
+        <input type="number" id="nilai_ujian" name="nilai_ujian" min="0" max="100" value="50" step="10"><br><br> 
+
+        <hr> <!-- inpu type range (slider)-->
+        <label for="volume">Volume : </label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50"><br><br> 
+
+        <hr> <!-- input telephone -->
+        <!-- <label for="telepon">Telepon : </label>
+        <input type="tel" id="telepon" 
+        pattern="(62)[0-9]{5,20}"
+        name="telepon" placeholder="Masukkan nomor telepon"><br><br>  
+
+          -->
+        <!-- input file -->
+
+        <!-- input select tag -->
+        <label for="negara">Pilih Negara : </label>
+        <select id="negara" name="negara">
+            <option value="indonesia">Indonesia</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="singapura">Singapura</option>
+            <option value="thailand">Thailand</option>
+        </select><br><br>
+
+        <!-- input multiple -->
+        <label for="hobi">Pilih Hobi : </label>
+        <select id="hobi" name="hobi" multiple size="2">
+            <option value="membaca">Membaca</option>
+            <option value="menulis">Menulis</option>
+            <option value="berkebun">Berkebun</option>
+            <option value="memasak">Memasak</option>
+
+        </select><br><br>
+
+        <!-- input option group -->
+        <label for="jurusan">Pilih Jurusan : </label>
+        <select id="jurusan" name="jurusan">
+            <optgroup label="Fakultas Teknik">
+                <option value="informatika">Informatika</option>
+                <option value="elektro">Elektro</option>
+            </optgroup>
+            <optgroup label="Fakultas Ekonomi">
+                <option value="akuntansi">Akuntansi</option>
+                <option value="manajemen">Manajemen</option>
+            </optgroup>
+        </select><br><br>
+
+        <!-- data list tag -->
+        <label for="negara_asal">Negara Asal : </label>
+        <input list="negara_list" id="negara_asal" name="negara_asal" placeholder="Pilih atau ketik negara asal">
+        <datalist id="negara_list">
+            <option value="Indonesia">
+            <option value="Malaysia">
+            <option value="Singapura">
+            <option value="Thailand">
+        </datalist><br><br>
+
+        <!-- field set tag -->
+        <fieldset>
+            <legend>Informasi Pribadi</legend>
+            <label for="nama">Nama : </label>
+            <input type="text" id="nama" name="nama"><br><br>
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informasi Pekerjaan</legend>
+            <label for="pekerjaan">Pekerjaan : </label>
+            <input type="text" id="pekerjaan" name="pekerjaan"><br><br>
+            <label for="gaji">Gaji : </label>
+            <input type="number" id="gaji" name="gaji"><br><br>
+
+        </fieldset>
+
+
+    </form>
+    <!-- <form name="contoh" action="form-submit.html" enctype="application/x-www-form-urlencoded"
+    method="post" target="_blank">
+        <input text="text" name="pencarian" placeholder="Masukkan kata kunci">
+    </form> -->
+</body>
+</html>

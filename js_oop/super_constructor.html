@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Constructor</title>
+</head>
+<body>
+    <script>
+        function Employee(firstName) {
+            
+            constructor(name) {
+                this.name = name;
+            }
+            
+        }
+
+        function Manager(firstName, department) {
+            Employee.call(this, firstName);
+            this.department = department; 
+        }
+
+        let manager = new Manager("Budi", "IT");
+        document.writeln(manager.sayHello()); // Hello Budi
+
+        console.log(manager);
+
+        Employee.prototype.sayGoodbye = function() {
+            return "Goodbye " + this.firstName;
+        }
+
+        Employee.prototype.run = function() {
+            return this.firstName + " is running";
+        }
+
+        const juju = new Employee("Juju");
+        console.log(juju); 
+        console.log(juju.sayGoodbye()); // Goodbye Juju
+
+        // console.log(manager.Employee.sayGoodbye()); // Goodbye Budi
+    </script>
+</body>
+</html>

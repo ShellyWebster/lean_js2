@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <style>
+        div p {
+            color: red;
+        }
+        /* child selector */
+        div > p {
+            color: blue;
+        }
+        /* adjacent sibling selector */
+        article + p {
+            color: green;
+        }
+        /* general sibling selector */
+        article ~ p {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <article> <p>dipilih,  </p>tidak ! </article>
+        <p>This paragraph will be red because it is a descendant of a div.</p>
+    </div>
+    <p>This paragraph will not be red because it is not a descendant of a div.</p>
+    <hr>
+    <div>
+        <article> <p>tidak dipilih,  </p>tidak ! </article>
+        <p>This paragraph will be blue because it is a direct child of a div.</p>
+        <p>This paragraph will not be blue because it is not a direct child of a div.</p>
+    </div>
+    
+</body>
+</html>
