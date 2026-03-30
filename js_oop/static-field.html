@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staic field</title>
+</head>
+<body>
+    <script>
+        class Configuration {
+            static name = "Belajar OOP JS";
+            static version = 1.0;
+            static author = "Jajang Nurjaman";
+        }
+
+        class MathUtil {
+            static phi = 3.14;
+
+            static sum(...numbers) {
+                if (numbers.length === 0) {
+                    throw new Error("Total parameter harus lebih dari 0");
+                }
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                }
+                return total;
+            }
+        }
+
+        const config = new Configuration();
+        console.log(config);
+        
+
+        console.info(Configuration.author);
+
+        Configuration.author = "Nugelo Budugg";
+
+        console.info(Configuration.author);
+
+        const sum = MathUtil.sum(1, 1, 1 , 1, 1);
+        // console.info(MathUtil.sum());
+        console.info(`Jumlah nya : ${sum}`);
+
+        try {
+            console.info(MathUtil.sum());
+            console.info("Kode Block try akan berhenti");
+        } catch (error) {
+            console.error(`Terjadi error : ${error.message}`);
+        } finally {
+            console.info("Kode Program Selesai!");
+        }
+
+        console.info("Kode program tidak akan berhenti");
+
+    </script>
+</body>
+</html>
