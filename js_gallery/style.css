@@ -28,6 +28,11 @@ body {
     cursor: pointer;
 }
 
+.thumb.active {
+    opacity: 0.2;
+    /* border: solid 2px #f4d03f; */
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
