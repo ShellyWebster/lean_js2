@@ -56,3 +56,89 @@ const angka = [-1, 8, 9, 1, 4, -5, -4, 3, 2, 9];
 
 
 // latihan 
+// ambil semua elemen video 
+// test ambil h3, //judul 
+// ME WORKS !
+/*
+const judul = document.getElementsByTagName("h3")[0];
+console.log(judul.innerHTML);
+
+const list_li = document.querySelectorAll("ul li");
+const li_lanjutan = [];
+for (let i = 0; i < list_li.length; i++) {
+    if(list_li[i].innerHTML.includes('JAVASCRIPT LANJUTAN')) {
+        li_lanjutan.push(list_li[i]);
+    }
+}
+// console.log(list_li);
+console.log(li_lanjutan);
+
+
+// pilih yg hanya 'JAVASCRIPT LANJUTAN' 
+
+// ambil durasi masing2 video 
+let grandTotalSeconds = 0;
+for(let i=0; i<li_lanjutan.length; i++) {
+    const time = li_lanjutan[i].getAttribute('data-duration');
+    const [minutes, seconds] = time.split(":").map(Number);
+    const totalSeconds = minutes * 60 + seconds;
+    grandTotalSeconds += totalSeconds;
+    
+    console.log(time);
+}
+
+// let jumlah_video = document.getElementsByTagName("span .jumlah");
+let jumlah_video = document.querySelector('.jumlah-video');
+jumlah_video.innerHTML = `${li_lanjutan.length} video`;
+
+let total_durasi = document.querySelector('.total-durasi');
+const hours = Math.floor(grandTotalSeconds / 3600);
+const minutes = Math.floor((grandTotalSeconds % 3600) / 60);
+const seconds = grandTotalSeconds % 60;
+
+total_durasi.innerHTML = `${hours}:${minutes}:${seconds}`;
+*/
+
+
+// ubah durasi menjadi int, ubah menit menjadi detik 
+
+// jumlah semua detik
+
+// konversi ke jam: menit : detik 
+
+
+// SIMPAN DI DOM 
+
+// pak dhika 
+const videos = Array.from(document.querySelectorAll('[data-duration'));
+console.log(videos);
+
+let jsLanjut = videos.filter(video => video.textContent.includes('JAVASCRIPT LANJUTAN'))
+    .map(item => item.dataset.duration)
+    
+    //ubah durasi menjadi int
+    .map(waktu => {
+        //pak dika 
+        const parts = waktu.split(':').map(part => parseFloat(part));
+        // me 
+        // const parts = waktu.split(':').map(Number);
+        return (parts[0] * 60) + parts[1];
+    })
+
+    .reduce((total, detik) => total + detik)
+    ;
+
+// ubah format 
+const jam = Math.floor(jsLanjut / 3600);
+jsLanjut = jsLanjut - jam * 3600;
+const menit = Math.floor(jsLanjut / 60);
+const detik = jsLanjut - menit * 60;
+
+const pDurasi = document.querySelector('.total-durasi');
+pDurasi.textContent = `${jam} Jam, ${menit} Menit, ${detik} Detik`;
+
+const jmlVideo = videos.filter(video => video.textContent.includes('JAVASCRIPT LANJUT')).length;
+const pJmlVideo = document.querySelector('.jumlah-video');
+pJmlVideo.textContent = `${jmlVideo} Video.`;
+
+console.log(jsLanjut);
