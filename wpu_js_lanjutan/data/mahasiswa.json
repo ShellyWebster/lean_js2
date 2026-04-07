@@ -1,0 +1,23 @@
+[
+    {
+        "nama" : "Sandhika",
+        "nrp": "11010323",
+        "email" : "yoyo@gmail.cokm",
+        "jurusan" : "Teknik A",
+        "idDosenWali" : 1
+    },
+    {
+        "nama" : "Radit Sandhika",
+        "nrp": "11010323",
+        "email" : "2yoyo@gmail.cokm",
+        "jurusan" : "Teknik B",
+        "idDosenWali" : 2
+    },
+    {
+        "nama" : "Maman Sandhika",
+        "nrp": "11010323",
+        "email" : "3yoyo@gmail.cokm",
+        "jurusan" : "Teknik C",
+        "idDosenWali" : 3
+    }
+]
