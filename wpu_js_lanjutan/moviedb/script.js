@@ -1,34 +1,44 @@
-$.ajax({
-    // url: 'x',
-    url: 'https://www.omdbapi.com/?apikey=640e288c&s=toy',
-    success: result => {
-        const movies = result.Search;
-        // console.log(movies);
-        let cards = '';
-        movies.forEach(m => {
-            cards += `<div class="col-md-4 my-3">
-                        <div class="card">
-                            <img class="card-img-top" src="${m.Poster}">
-                            <div class="card-body">
-                                <h5 class="card-title">${m.Title}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">${m.Year}</h6>
-                                <a href="#" class="btn btn-primary modal-detail-button" 
-                                data-imdbid="${m.imdbID}" data-bs-toggle="modal" data-bs-target="#movieDetailModal">Show Details</a>
-                            </div>
-                        </div>
-                    </div>`;
-        });
-        $('.movie-container').html(cards)
+$('.search-button').on('click', function() {
 
-        // ketika tombol detail di-klik 
-        $('.modal-detail-button').on('click', function(){
-            console.log($(this).data('imdbid'));
-            
-            $.ajax({
-                url: 'https://www.omdbapi.com/?apikey=640e288c&i=' + $(this).data('imdbid'),
-                success: m => {
-                    console.log(m.Title);
-                    const movieDetail = `<div class="container-fluid">
+    $.ajax({
+        // url: 'x',
+        url: 'https://www.omdbapi.com/?apikey=640e288c&s=' + $('.input-keyword').val(),
+        success: result => {
+            const movies = result.Search;
+            // console.log(movies);
+            let cards = '';
+            movies.forEach(m => {
+                cards += showCards(m);
+            });
+            $('.movie-container').html(cards)
+
+            // ketika tombol detail di-klik 
+            $('.modal-detail-button').on('click', function(){
+                console.log($(this).data('imdbid'));
+                
+                $.ajax({
+                    url: 'https://www.omdbapi.com/?apikey=640e288c&i=' + $(this).data('imdbid'),
+                    success: m => {
+                        console.log(m.Title);
+                        const movieDetail = showMovieDetail(m);
+                                            $('.modal-body').html(movieDetail);
+                    },
+                    error: (e) => {
+                        console.log(e.responseText);
+                    }
+
+                });
+            });
+        },
+        error: (e) => {
+            console.log(e.responseText);
+        }
+    });
+
+});
+
+function showMovieDetail(m) {
+    return `<div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <img src="${m.Poster}" class="img-fluid">
@@ -44,16 +54,19 @@ $.ajax({
                                                 </div>
                                             </div>
                                         </div>`;
-                                        $('.modal-body').html(movieDetail);
-                },
-                error: (e) => {
-                    console.log(e.responseText);
-                }
+}
 
-            });
-        });
-    },
-    error: (e) => {
-        console.log(e.responseText);
-    }
-});
+
+function showCards(m) {
+    return `<div class="col-md-4 my-3">
+                        <div class="card">
+                            <img class="card-img-top" src="${m.Poster}">
+                            <div class="card-body">
+                                <h5 class="card-title">${m.Title}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">${m.Year}</h6>
+                                <a href="#" class="btn btn-primary modal-detail-button" 
+                                data-imdbid="${m.imdbID}" data-bs-toggle="modal" data-bs-target="#movieDetailModal">Show Details</a>
+                            </div>
+                        </div>
+                    </div>`;
+}
