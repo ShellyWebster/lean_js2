@@ -1,41 +1,55 @@
-$('.search-button').on('click', function() {
+// $('.search-button').on('click', function() {
 
-    $.ajax({
-        // url: 'x',
-        url: 'https://www.omdbapi.com/?apikey=640e288c&s=' + $('.input-keyword').val(),
-        success: result => {
-            const movies = result.Search;
-            // console.log(movies);
-            let cards = '';
-            movies.forEach(m => {
-                cards += showCards(m);
-            });
-            $('.movie-container').html(cards)
+//     $.ajax({
+//         // url: 'x',
+//         url: 'https://www.omdbapi.com/?apikey=640e288c&s=' + $('.input-keyword').val(),
+//         success: result => {
+//             const movies = result.Search;
+//             // console.log(movies);
+//             let cards = '';
+//             movies.forEach(m => {
+//                 cards += showCards(m);
+//             });
+//             $('.movie-container').html(cards)
 
-            // ketika tombol detail di-klik 
-            $('.modal-detail-button').on('click', function(){
-                console.log($(this).data('imdbid'));
+//             // ketika tombol detail di-klik 
+//             $('.modal-detail-button').on('click', function(){
+//                 console.log($(this).data('imdbid'));
                 
-                $.ajax({
-                    url: 'https://www.omdbapi.com/?apikey=640e288c&i=' + $(this).data('imdbid'),
-                    success: m => {
-                        console.log(m.Title);
-                        const movieDetail = showMovieDetail(m);
-                                            $('.modal-body').html(movieDetail);
-                    },
-                    error: (e) => {
-                        console.log(e.responseText);
-                    }
+//                 $.ajax({
+//                     url: 'https://www.omdbapi.com/?apikey=640e288c&i=' + $(this).data('imdbid'),
+//                     success: m => {
+//                         console.log(m.Title);
+//                         const movieDetail = showMovieDetail(m);
+//                                             $('.modal-body').html(movieDetail);
+//                     },
+//                     error: (e) => {
+//                         console.log(e.responseText);
+//                     }
 
-                });
-            });
-        },
-        error: (e) => {
-            console.log(e.responseText);
-        }
-    });
+//                 });
+//             });
+//         },
+//         error: (e) => {
+//             console.log(e.responseText);
+//         }
+//     });
 
+// });
+
+
+
+//fetch 
+const searchButton = document.querySelector('.search-button');
+searchButton.addEventListener('click', function() {
+
+    const intputKeyword = document.querySelector('.input-keyword');
+    fetch('https://www.omdbapi.com/?apikey=640e288c&s=' + intputKeyword.value)
+        .then(response => response.json())
+        .then(response => console.log(response));
 });
+
+
 
 function showMovieDetail(m) {
     return `<div class="container-fluid">
