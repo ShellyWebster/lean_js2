@@ -12,4 +12,6 @@ console.log(validator.isNumeric('123'));
 let zz = chalk.red('Hello') + ' ' + chalk.green('World');
 console.log(zz);
 
+console.log(chalk.bgMagenta.white('Hello world!'));
+
 // console.log(); 
