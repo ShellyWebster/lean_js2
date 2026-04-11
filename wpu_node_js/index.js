@@ -7,9 +7,19 @@
 
 // console.log(this.window);
 
-const fs = require('fs'); // core module
-const cetakNama = require('./coba'); // local module 
+// const fs = require('fs'); // core module
+// const cetakNama = require('./coba'); // local module 
+// const PI = require('./coba'); // local module 
+const coba = require('./coba'); 
+// console.log(coba);
+// const moment = require('moment'); // third party module / npm module / node_modules
 
 // console.log('Ini index.js');
 
-console.log(cetakNama('Juned'));
+const mhs = coba.mahasiswa
+console.log(mhs.cetakMhs());
+
+
+console.log(coba.cetakNama('Juned'), coba.PI, new coba.Orang());
+
+// console.log(mhs.cetakNama);

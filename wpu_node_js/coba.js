@@ -49,5 +49,38 @@ function cetakNama(nama) {
     return `Halo, nama saya ${nama}`;
 }
 
-module.exports = cetakNama;
+const PI = 3.14;
 
+const mahasiswa = {
+    nama: 'Dody',
+    umur: 20,
+    cetakMhs() {
+        return `halo nama saya ${this.nama}`;   
+    }
+}
+
+class Orang {
+    constructor() {
+        console.log('Objek orang telah dibuat!!');
+    }
+}
+
+// module.exports.cetakNama = cetakNama;
+// module.exports.PI = PI;
+// module.exports.mahasiswa = mahasiswa;
+// module.exports.orang = Orang;
+
+// module.exports = {
+//     cetakNama: cetakNama,
+//     PI: PI,
+//     mahasiswa: mahasiswa,
+//     orang: Orang
+// }
+
+// ES 6
+module.exports = {
+    cetakNama,
+    PI,
+    mahasiswa, 
+    Orang
+}
