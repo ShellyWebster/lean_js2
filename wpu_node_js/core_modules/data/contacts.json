@@ -1,1 +1,18 @@
-[{"name":"Hai","no_hp":""},{"name":"Janet from another Plante","no_hp":""}]
+[
+  {
+    "name": "Hai",
+    "no_hp": ""
+  },
+  {
+    "name": "Janet from another Plante",
+    "no_hp": ""
+  },
+  {
+    "name": "Johan Cryuf",
+    "no_hp": ""
+  },
+  {
+    "name": "Jojo Gogo",
+    "no_hp": "084523543"
+  }
+]
