@@ -45,7 +45,7 @@ let no_hp = '';
 
 rl.question('Masukan nama anda : ', (name) => {
     
-    rl.question('Masukan no hp anda : ', (noHp) => {
+    rl.question('Masukan no hp anda : ', (no_hp) => {
         // nama = name;
         // no_hp = noHp;
 
@@ -61,7 +61,9 @@ rl.question('Masukan nama anda : ', (name) => {
         console.log(contacts);
 
         // write to file 
-        fs.writeFileSync('data/contacts.json', JSON.stringify(contacts)); 
+        // fs.writeFileSync('data/contacts.json', JSON.stringify(contacts)); 
+
+        fs.writeFileSync('data/contacts.json', JSON.stringify(contacts, null, 2)); 
 
         rl.close();
     });
