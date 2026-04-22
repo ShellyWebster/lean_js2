@@ -46,7 +46,33 @@ searchButton.addEventListener('click', function() {
     const intputKeyword = document.querySelector('.input-keyword');
     fetch('https://www.omdbapi.com/?apikey=640e288c&s=' + intputKeyword.value)
         .then(response => response.json())
-        .then(response => console.log(response));
+        // .then(response => console.log(response));
+        .then(response => {
+            const movies = response.Search;
+            let cards = '';
+            movies.forEach(m => cards += showCards(m));
+            const movieContainer = document.querySelector('.movie-container');
+            movieContainer.innerHTML = cards;
+
+            // ketika tombol detail di-klik
+            const modalDetailButton = document.querySelectorAll('.modal-detail-button'); 
+            modalDetailButton.forEach(btn => {
+                btn.addEventListener('click', function() {
+                //    console.log(this); 
+                    const imdbid = this.dataset.imdbid; 
+                    console.log(imdbid);
+                    fetch('https://www.omdbapi.com/?apikey=640e288c&i=' + imdbid)
+                      .then(response => response.json())
+                      .then(m => {
+                        const movieDetail = showMovieDetail(m);
+                        const modalBody = document.querySelector('.modal-body');
+                        modalBody.innerHTML = movieDetail;
+                        // $('.modal-body').html(movieDetail);
+                      });
+                });
+            });
+        });
+        
 });
 
 
